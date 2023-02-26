@@ -14,15 +14,49 @@ export default {
           title: 'Banners Computer',
           name: 'banners_computer',
           type: 'array',
-          of: [{type: 'url'}],
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  title: 'Banner',
+                  name: 'banner',
+                  type: 'url',
+                },
+                {
+                  title: 'link',
+                  name: 'link',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+
           validation: (Rule: Rule) => Rule.min(1).max(3).required(),
         },
         {
           title: 'Banners Mobile',
           name: 'banners_mobile',
           type: 'array',
-          of: [{type: 'url'}],
-          validation: (Rule: Rule) => Rule.max(1).required(),
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  title: 'Banner',
+                  name: 'banner',
+                  type: 'url',
+                },
+                {
+                  title: 'link',
+                  name: 'link',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+
+          validation: (Rule: Rule) => Rule.min(1).max(1).required(),
         },
       ],
     },
