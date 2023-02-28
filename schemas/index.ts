@@ -1,6 +1,7 @@
 import category from './category'
-import dailypics from './weekSelections'
+import weekSelections from './weekSelections'
 import mainBanner from './mainBanner'
 import products from './products'
+import newArrivals from './newArrivals'
 
-export const schemaTypes = [products, category, mainBanner, dailypics]
+export const schemaTypes = [products, category, mainBanner, weekSelections, newArrivals]
