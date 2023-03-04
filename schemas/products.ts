@@ -7,7 +7,7 @@ export default {
   fields: [
     {title: 'Title', name: 'title', type: 'string', validation: (Rule: Rule) => Rule.required()},
     {title: 'Price', name: 'price', type: 'number', validation: (Rule: Rule) => Rule.required()},
-    {title: 'Description', name: 'description', type: 'string'},
+    {title: 'Description', name: 'description', type: 'array', of: [{type: 'block'}]},
     {
       title: 'Category',
       name: 'category',
